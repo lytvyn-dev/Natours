@@ -1,0 +1,143 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* custom */
+@import "./_global.css";
+@import "./_animations.css";
+@import "./_typography.css";
+
+/*? components */
+@layer components {
+  .btn {
+    text-align: center;
+    font-size: 19.2px;
+    font-weight: 400;
+    line-height: 32.64px; /* 170% */
+    text-transform: uppercase;
+    padding: 17px 46.504px 18.64px 47.826px;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 120px;
+
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 120px;
+      z-index: -1;
+    }
+
+    &:hover::after {
+      animation: pulse 0.2s ease-in-out forwards;
+    }
+  }
+
+  .input {
+    @apply min-w-[486px] rounded-sm bg-white text-[#333] text-[1.8rem] py-[21px] px-[24px] outline-none placeholder:text-[#999] border-b-[transparent] border-b-4 focus:border-b-4 focus:border-b-primaryGreen shadow-xl focus:invalid:border-b-[red] transition-all;
+
+    &:placeholder-shown + label {
+      transform: translateY(-45px);
+      opacity: 0;
+      visibility: hidden;
+      user-select: none;
+    }
+  }
+
+  .check-input {
+    display: none;
+    &:checked ~ label span::after {
+      opacity: 1;
+    }
+  }
+
+  .card-blur {
+    @apply p-24 bg-[rgb(255,255,255,0.6)] w-[75%] rounded-[3px] text-gray -skew-x-12 cursor-pointer;
+
+    &:hover img {
+      @apply scale-100;
+      filter: blur(10px);
+    }
+    &:hover figcaption {
+      @apply -translate-y-1/2;
+      opacity: 1;
+    }
+  }
+
+  .card-figure {
+    @apply relative skew-x-12 overflow-hidden mr-[30px];
+    width: 180px;
+    height: 180px;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    float: left;
+  }
+
+  .text-decoration {
+    @apply bg-gradient py-4 px-6 leading-[170%];
+    -webkit-box-decoration-break: clone;
+  }
+
+  .back {
+    transform: rotateY(-180deg);
+  }
+
+  .back,
+  .front {
+    @apply shadow-xl;
+    transition: transform 0.8s;
+    backface-visibility: hidden;
+  }
+
+  .flipper {
+    perspective: 150rem;
+    position: relative;
+
+    backface-visibility: hidden;
+    &:hover .front {
+      transform: rotateY(180deg);
+    }
+    &:hover .back {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+/*? utilities */
+@layer utilities {
+  .image-scaler {
+    height: 0;
+
+    &:hover img:not(:hover) {
+      @apply scale-95;
+    }
+  }
+
+  .clip {
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 0% 100%);
+  }
+
+  .nav {
+    position: fixed;
+    top: 50%;
+    left: -100%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s;
+  }
+
+  .toggle-nav {
+    &:checked ~ .nav {
+      animation: navigation 0.4s forwards;
+    }
+    &:checked ~ .backdrop {
+      transform: scale(80rem);
+    }
+  }
+}
