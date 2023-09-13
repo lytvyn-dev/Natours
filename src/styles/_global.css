@@ -4,6 +4,11 @@ body {
   font-size: 1.4rem;
   display: flex;
   flex-direction: column;
-  padding: 36px;
+  padding: 3.6rem;
   color: theme("colors.gray");
+}
+
+::selection {
+  background-color: theme("colors.primaryGreen");
+  color: theme("colors.white");
 }

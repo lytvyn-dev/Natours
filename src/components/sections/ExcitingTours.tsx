@@ -2,12 +2,12 @@ import DynamicImageScaler from "../UI/DynamicImageScaler";
 
 function ExcitingTours() {
   return (
-    <section className="max-w-[1368px] mx-auto mb-[210px]">
-      <h2 className="text-center text-[4.2rem] font-bold leading-[170%] uppercase traching-[2.4px] bg-gradient bg-clip-text text-[transparent] mb-[72px] hover:skew-x-[20deg] hover:scale-105 hover:rotate-2  transition-transform">
+    <section className="max-w-[136.68rem] mx-auto mb-[21rem]">
+      <h2 className="text-center text-xl font-bold leading-[170%] uppercase traching-[2.4px] bg-gradient bg-clip-text text-[transparent] mb-[7.2rem] hover:skew-x-[20deg] hover:scale-105 hover:rotate-2  transition-transform">
         Exciting tours for adventurous people
       </h2>
-      <div className="flex gap-[72px]">
-        <div className="basis-1/2 flex flex-col gap-9 text-[1.9rem] leading-[170%]">
+      <div className="flex gap-[7.2rem]">
+        <div className="basis-1/2 flex flex-col gap-9 text-base leading-[170%]">
           <div className="flex flex-col gap-4">
             <p className=" font-bold uppercase">You're going to fall in love with nature</p>
             <p>
@@ -24,7 +24,7 @@ function ExcitingTours() {
             </p>
           </div>
           <a
-            className="self-start text-primaryGreen relative z-2 border-b-2 border-primaryGreen px-2 hover:bg-primaryGreen hover:text-white hover:-translate-y-2 transition-all duration-300 text-[1.9rem] leading-[170%]"
+            className="self-start text-primaryGreen relative z-2 border-b-2 border-primaryGreen px-2 hover:bg-primaryGreen hover:text-white hover:-translate-y-2 transition-all duration-300 text-base leading-[170%]"
             href="#"
           >
             Learn more &rarr;

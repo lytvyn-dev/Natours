@@ -1,14 +1,14 @@
 function Footer() {
   return (
-    <footer className="py-[120px] bg-[#333] ">
-      <div className="max-w-[1368px] mx-auto flex flex-col gap-y-[104px] text-[#F7F7F7] text-[1.6rem] leading-[170%]">
+    <footer className="py-[12rem] bg-[#333] ">
+      <div className="max-w-[136.68rem] mx-auto flex flex-col gap-y-[10.04rem] text-[#F7F7F7] text-sm leading-[170%]">
         <img
-          className="w-[150px] self-center"
+          className="w-[15rem] self-center"
           src="../src/assets/images/logo-green-1x.png"
           alt=""
         />
         <div className="flex justify-between">
-          <ul className="flex gap-x-[21px] uppercase">
+          <ul className="flex gap-x-[2.1rem] uppercase">
             <li className="cursor-pointer hover:scale-125 hover:text-primaryGreen hover:skew-y-[5deg] transition-all hover:shadow-[0_1rem_2rem_rgba(0,0,0,0.4)]">
               <a href="#">Company</a>
             </li>

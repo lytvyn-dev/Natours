@@ -1,13 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  safelist: ["bg-white", "bg-primaryGreen", "after:bg-white", "text-gray"],
   theme: {
     colors: {
       gray: "#777",
       white: "#fff",
+      black: "#333",
+      backdrop: "rgba(0, 0, 0, 0.676)",
       primaryGreen: "#55C57A",
       gradient: "linear-gradient(90deg, #7ED56F 0%, #28B485 100%)",
+    },
+    fontSize: {
+      xs: "1.2rem",
+      sm: "1.6rem",
+      base: "1.9rem",
+      xl: "4.2rem",
+      "2xl": "7.2rem",
     },
     extend: {
       boxShadow: {
@@ -37,7 +45,6 @@ export default {
         gradient: "linear-gradient(90deg, #7ED56F 0%, #28B485 100%)",
         form: "linear-gradient(105deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 50%, transparent 50%),url(./src/assets/images/nat-10.jpg)",
       },
-      fontFamily: ["Lato", "sans-serif"],
     },
   },
   plugins: [],

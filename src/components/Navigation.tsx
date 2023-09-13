@@ -1,18 +1,13 @@
 import { Fragment } from "react";
+import BurgerMenu from "./Burger-menu";
 
 function Navigation() {
   return (
     <Fragment>
-      <input className="toggle-nav hidden" type="checkbox" name="navigation" id="navigation" />
-      <label
-        className="fixed top-28 right-28 h-[7rem] w-[7rem] bg-white rounded-full z-[1001] cursor-pointer"
-        htmlFor="navigation"
-      ></label>
-
-      <div className="backdrop fixed top-28 right-28 h-[6.5rem] rounded-full w-[6.5rem] z-[1005] bg-menu"></div>
+      <BurgerMenu />
 
       <nav className="nav z-[1002]">
-        <ul className="flex flex-col items-center gap-y-4 text-5xl text-white font-light">
+        <ul className="flex flex-col items-center gap-y-4 text-[3.6rem] text-white font-light">
           <li>
             <a
               className="inline-block bg-navigation bg-[length:220%] hover:bg-[100%] py-4 px-8 hover:text-primaryGreen transition-all duration-300"

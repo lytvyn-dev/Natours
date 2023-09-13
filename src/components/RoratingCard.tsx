@@ -42,14 +42,14 @@ const RotatingCard = (props: CardProps) => {
         </ul>
       </div>
       <div
-        className={`back absolute w-full h-full ${props.backBg}  flex flex-col justify-center items-center gap-y-[95px]`}
+        className={`back absolute w-full h-full ${props.backBg}  flex flex-col justify-center items-center gap-y-[9.5rem]`}
       >
         <div className="text-white font-thin flex flex-col items-center">
           <p className="text-[1.6rem]">only</p>
           <p className="text-[6rem] uppercase">${props.price}</p>
         </div>
 
-        <Button title="Book now" textColor="gray" bgColor="white" />
+        <Button title="Book now" href="#popup" textColor="text-gray" bgColor="bg-white" />
       </div>
     </article>
   );

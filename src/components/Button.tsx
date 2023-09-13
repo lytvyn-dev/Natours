@@ -4,6 +4,7 @@ import "../../src/styles/index.css";
 
 interface ButtonProps {
   textColor: string;
+  href: string | "";
   title: string;
   bgColor: string;
   animation?: string;
@@ -12,10 +13,10 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = (props) => {
   return (
     <a
-      className={`btn ${props.animation} ${props.animation ? "opacity-0" : ""} after:bg-${
+      className={`btn ${props.animation} ${props.animation ? "opacity-0" : ""} z-[10]  ${
         props.bgColor
-      } bg-${props.bgColor} text-${props.textColor}`}
-      href="#"
+      } ${props.textColor}`}
+      href={props.href}
     >
       {props.title}
     </a>

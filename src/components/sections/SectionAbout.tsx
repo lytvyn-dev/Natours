@@ -2,8 +2,8 @@ import Card from "../Card";
 
 function SectionAbout() {
   return (
-    <section className="mb-[180px] -skew-y-6 bg-section-bg bg-cover bg-top py-[240px]">
-      <div className="max-w-[1368px] skew-y-6 mx-auto flex justify-between">
+    <section className="mb-[18rem] -skew-y-6 bg-section-bg bg-cover bg-top py-[24rem]">
+      <div className="max-w-[136.68rem] skew-y-6 mx-auto flex justify-between">
         <Card
           url="../src/assets/images/svg-1.svg"
           imgAlt="icon svg"
